@@ -15,6 +15,8 @@ $('.el').grid({
     imageHeight: 117,
     spacing: [9, 10],
     grid: [[0,0,1,0,0], [0,1,1,0], [0,0,1,0,0]],
+    hideInitialImages: false,
+    initialImageOrder: [4, 6, 9, 3, 1, 2, 5, 7, 8],
     swap: {
         enabled: true,
         historyPosition: 1,
@@ -59,6 +61,16 @@ element is the vertical space (y). Default value is [10, 10]
 Array used to generate the grid.
 0 means "place here a small version" and 1 means "place here a large version".
 Default value: [[0,0,1,0,0], [0,1,1,0], [0,0,1,0,0]]
+
+#### hideInitialImages
+Boolean to hide/show the initial image. Usefull to prevent flickering for 
+initial load (and using a background image).
+Default false
+
+#### initialImageOrder
+If specified, this array will be used as the initial image order. Usefull if 
+we want to use a background image for initial load (with hideInitialImage: true)
+Default []
 
 <br>
 ### Swap
